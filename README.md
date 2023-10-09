@@ -61,13 +61,13 @@ flowchart TB
     subgraph Workflow on Your Project
     C[Scenario]
 
-    C -->|Project #1| D[#create project #1 directory: \n - mkdir project_1 \n  - cd project_1]
+    C -->|Project #1| D[#Create project #1 directory: \n - mkdir project_1 \n  - cd project_1]
     D--> |set up environement| E[#Install or use python version \n - pyenv install 3.10 \n - pyenv local 3.10 \n #use this python version \n - poetry env use 3.10]
     E --> |pyproject.toml| F[#eg: add numpy and pandas: \n - poetry add numpy pandas]
     F --> |add another dependecies| G[#eg: add jupyter notebook for \n your local developement usage: \n - poetry add -G dev jupyter notebook]
     G --> |pyproject.toml is updated| F
 
-    C -->|Project #2| H[#create project #2 directory: \n - mkdir project_2 \n  - cd project_2]
+    C -->|Project #2| H[#Create project #2 directory: \n - mkdir project_2 \n  - cd project_2]
     H --> |if same environment |E
     H --> |another environment, eg py-3.8 | J[#Install or use python version \n - pyenv install 3.8 \n - pyenv local 3.8 \n #use this python version \n - poetry env use 3.8]
     J-->F
